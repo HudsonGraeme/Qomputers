@@ -1,0 +1,10 @@
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.csprojResolveAssemblyReference.cache
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1_Culminating.InitialView.resources
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1_Culminating.Properties.Resources.resources
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.csproj.GenerateResource.Cache
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\ICS3U1 Culminating.exe.config
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\ICS3U1 Culminating.exe
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\ICS3U1 Culminating.pdb
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.exe
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.pdb
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\Resources\Hind-Light.ttf
