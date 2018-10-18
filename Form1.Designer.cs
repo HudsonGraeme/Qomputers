@@ -33,14 +33,14 @@
             // 
             // MainLabel
             // 
-            this.MainLabel.AutoSize = true;
             this.MainLabel.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MainLabel.Location = new System.Drawing.Point(290, 195);
+            this.MainLabel.Location = new System.Drawing.Point(233, 192);
             this.MainLabel.Name = "MainLabel";
-            this.MainLabel.Size = new System.Drawing.Size(187, 40);
+            this.MainLabel.Size = new System.Drawing.Size(400, 100);
             this.MainLabel.TabIndex = 0;
             this.MainLabel.Text = "Qomputers";
+            this.MainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InitialView
             // 
@@ -53,8 +53,8 @@
             this.Name = "InitialView";
             this.Text = "Qomputers";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.InitialView_Shown);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

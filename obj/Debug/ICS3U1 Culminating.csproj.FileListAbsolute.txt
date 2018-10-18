@@ -8,3 +8,10 @@ H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\ICS3U1 Culminating.pdb
 H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.exe
 H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.pdb
 H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\Resources\Hind-Light.ttf
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\Newtonsoft.Json.dll
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\System.Net.Http.Extensions.dll
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\System.Net.Http.Primitives.dll
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\Newtonsoft.Json.xml
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\System.Net.Http.Extensions.xml
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\bin\Debug\System.Net.Http.Primitives.xml
+H:\Documents\ICS3U1\Wk7\ICS3U1 Culminating\obj\Debug\ICS3U1 Culminating.csproj.App.config
