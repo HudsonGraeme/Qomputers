@@ -17,6 +17,10 @@ namespace ICS3U1_Culminating
 {
     public partial class InitialView : Form
     {
+
+        private TextBox UsernameEntry = new TextBox();
+        private Label UsernameField = new Label();
+        private Button AcceptUsername = new Button();
         public InitialView()
         {
             InitializeComponent();
@@ -36,8 +40,12 @@ namespace ICS3U1_Culminating
         private void InitialView_Shown(object sender, EventArgs e)
         {
             InitializeUsernameField();
+            InitializeAcceptButton();
         }
+        private void InitializeAcceptButton()
+        {
 
+        }
         System.Windows.Forms.Timer labelTransition = new System.Windows.Forms.Timer();
         private void InitializeTimer()
         {
@@ -47,19 +55,21 @@ namespace ICS3U1_Culminating
             labelTransition.Start();
         }
 
-        private TextBox UsernameEntry = new TextBox();
-        private Label UsernameField = new Label();
         private void InitializeUsernameField()
         {
-            ActiveForm.Controls.Add(UsernameEntry);
+            this.Controls.Add(UsernameEntry);
             UsernameEntry.Visible = false;
-            UsernameEntry.Location = new Point(ActiveForm.Size.Width / 2 + (UsernameEntry.Width / 2), ActiveForm.Size.Height / 2 - (UsernameEntry.Height / 2));
+            UsernameEntry.Top = ((this.ClientSize.Height / 2) + UsernameEntry.Height / 2);
+            UsernameEntry.BackColor = this.BackColor;
+            UsernameEntry.ForeColor = Color.White;
+            UsernameEntry.TextAlign = HorizontalAlignment.Center;
             animate(type.increasingWidth, UsernameEntry, new Size(500, 50));
             // UsernameField.Location = new Point(ActiveForm.Size.Width / 2 + (UsernameField.Width / 2), UsernameEntry.Location.Y - 40);
-            UsernameField.Left = (this.ClientSize.Width - UsernameField.Width) / 2;
-            UsernameField.Top = (this.ClientSize.Height - UsernameField.Height) / 2;
             UsernameField.Size = new Size(500, 50);
-            UsernameField.TextAlign = ContentAlignment.MiddleLeft;
+            UsernameField.Location = new Point((MainLabel.Left + MainLabel.Width / 2) - UsernameField.Width / 2, (this.Height / 2) - (UsernameField.Height / 2));
+            UsernameField.Top = ((this.ClientSize.Height / 2) - UsernameField.Height * 2);
+            UsernameField.TextAlign = ContentAlignment.MiddleCenter;
+            UsernameField.ForeColor = Color.White;
             Controls.Add(UsernameField);
             typewriteLabel("Please enter a username of your choice below.", UsernameField);
         }
@@ -131,7 +141,7 @@ namespace ICS3U1_Culminating
                 tmr.Enabled = true;
                 tmr.Start();
                 tmr.Tick += new EventHandler(timerTick);
-                control.Location = new Point(control.Location.X + (target.Width - control.Location.X), control.Location.Y);
+                control.Location = new Point((this.Width / 2 + control.Width + 50), control.Location.Y);
                 void timerTick(object sender, EventArgs e) {
                     if(control.Width < target.Width)
                     {
@@ -142,6 +152,7 @@ namespace ICS3U1_Culminating
                         Console.WriteLine(control.Width);
                     } else
                     {
+                        control.Location = new Point(MainLabel.Left + (MainLabel.Width / 2) - (control.Width / 2), control.Location.Y);
                         tmr.Enabled = false;
                         tmr.Stop();
                     }
@@ -189,7 +200,37 @@ namespace ICS3U1_Culminating
             fading
         }
 
+        // Handle movement of the form
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+        private void Close(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void Minimize(object sender, EventArgs e)
+        {
+            this.Minimize(sender, e);
+        }
+        private void Expand(object sender, EventArgs e)
+        {
+            this.Expand(sender, e);
+        }
     }
+
 }
 /*
                 {
