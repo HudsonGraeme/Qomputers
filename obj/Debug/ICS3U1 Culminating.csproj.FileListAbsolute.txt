@@ -35,3 +35,21 @@ C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Debug\ICS3U1 Cul
 C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Debug\ICS3U1 Culminating.pdb
 C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Debug\ICS3U1_Culminating.GameView.resources
 C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Debug\Resources\Questions.xml
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\Resources\Hind-Light.ttf
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\Resources\Questions.xml
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\ICS3U1 Culminating.exe.config
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\ICS3U1 Culminating.exe
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\ICS3U1 Culminating.pdb
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\Newtonsoft.Json.dll
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\System.Net.Http.Extensions.dll
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\System.Net.Http.Primitives.dll
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\Newtonsoft.Json.xml
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\System.Net.Http.Extensions.xml
+H:\Downloads\Qomputers-master\Qomputers-master\bin\Debug\System.Net.Http.Primitives.xml
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.csprojResolveAssemblyReference.cache
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1_Culminating.InitialView.resources
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1_Culminating.GameView.resources
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1_Culminating.Properties.Resources.resources
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.csproj.GenerateResource.Cache
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.exe
+H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.pdb

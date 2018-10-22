@@ -108,7 +108,7 @@ namespace ICS3U1_Culminating
                 }*/
                 GameView GameView = new GameView();
                 GameView.Show();
-                this.Close();
+                this.Hide();
                 } else
             {
                 UsernameField.Text = "Please enter a username.";
@@ -272,6 +272,7 @@ namespace ICS3U1_Culminating
         private void Close(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
         private void Minimize(object sender, EventArgs e)
         {

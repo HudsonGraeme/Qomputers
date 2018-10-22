@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace ICS3U1_Culminating
 {
@@ -20,21 +21,30 @@ namespace ICS3U1_Culminating
 
         private void GameView_Load(object sender, EventArgs e)
         {
-            XmlDocument xm = new XmlDocument();
-            xm.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
-            XmlNodeList questions = xm.DocumentElement.SelectNodes("/Questions/Question");
-            //XmlNode question = xm.DocumentElement.SelectSingleNode("/Question/Question");
-            foreach (XmlNode question in questions)
+            XDocument xm = XDocument.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
+            var questions = xm.Element("Questions").Elements();
+            foreach (var question in questions)
             {
-                XmlNodeList answers = question.SelectNodes("Answers");
+                var answers = question.Element("Answers").Elements();
              
-                Console.WriteLine(answers.Count);
-                foreach (XmlNode answer in answers) {
-                    string firstName = answer["Text"].InnerText;
-                    string lastName = answer["isCorrect"].InnerText;
-                    Console.WriteLine("Name: {0} {1}", firstName, lastName);
+                foreach (var answer in answers) {
+                    string text = answer.Element("Text").Value;
+                    bool isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                    if (answer == answers.First())
+                    {
+                        AnswerOne.Text = answer.Element("Text").Value;
+                        Console.WriteLine(AnswerOne.Text);
+                    } else if (answer == answers.ElementAt(1))
+                    {
+                        AnswerTwo.Text = answer.Element("Text").Value;
+                    } else if (answer == answers.ElementAt(2))
+                    {
+                        AnswerThree.Text = answer.Element("Text").Value;
+                    } else if (answer == answers.ElementAt(3))
+                    {
+                        AnswerFour.Text = answer.Element("Text").Value;
+                    }
                 }
-                Console.WriteLine(question.SelectSingleNode("Title").InnerText);
             }
             /*Answer one = new Answer();
             one.Title = "yeah";
@@ -189,6 +199,7 @@ namespace ICS3U1_Culminating
         private void Close(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
         private void Minimize(object sender, EventArgs e)
         {
