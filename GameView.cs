@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
+
+
 namespace ICS3U1_Culminating
 {
     public partial class GameView : Form
@@ -21,64 +23,148 @@ namespace ICS3U1_Culminating
 
         private void GameView_Load(object sender, EventArgs e)
         {
-            XDocument xm = XDocument.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
-            var questions = xm.Element("Questions").Elements();
-            foreach (var question in questions)
-            {
-                var answers = question.Element("Answers").Elements();
-             
-                foreach (var answer in answers) {
-                    string text = answer.Element("Text").Value;
-                    bool isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
-                    if (answer == answers.First())
-                    {
-                        AnswerOne.Text = answer.Element("Text").Value;
-                        Console.WriteLine(AnswerOne.Text);
-                    } else if (answer == answers.ElementAt(1))
-                    {
-                        AnswerTwo.Text = answer.Element("Text").Value;
-                    } else if (answer == answers.ElementAt(2))
-                    {
-                        AnswerThree.Text = answer.Element("Text").Value;
-                    } else if (answer == answers.ElementAt(3))
-                    {
-                        AnswerFour.Text = answer.Element("Text").Value;
-                    }
-                }
-            }
-            /*Answer one = new Answer();
-            one.Title = "yeah";
-            one.IsCorrect = true;
-            Answer two = new Answer();
-            two.IsCorrect = false;
-            two.Title = "isdk";
-            Question q = new Question
-            {
-                QuestionText = "Are youu bluu"
-            };
-            q.Answers.Add(one);
-            q.Answers.Add(two);
-            AnswerOne.Text = one.Title;
-            AnswerTwo.Text = two.Title;
-            AnswerOne.p*/
+            nextQuestion();
+            tm.Enabled = true;
+            tm.Interval = 1000;
+            tm.Tick += new EventHandler(tm_Tick);
         }
-
+        Timer tm = new Timer();
+        int subtractedpoints = 0;
+        int count = 0;
+        private void tm_Tick(object sender, EventArgs e)
+        {
+            if (count < 30)
+            {
+                subtractedpoints += 10;
+            }
+               
+        }
         private void AnswerOne_Click(object sender, EventArgs e) 
         {
+            if (AnswerOne.isCorrect)
+            {
+                questionText.Text = "Congratulations!";
+                Globals.points += (500 - subtractedpoints);
+            }
+            else
+            {
+                questionText.Text = "Sorry.";
+            }
+            PointsLabel.Text = Globals.points.ToString();
+            NextButton.Visible = true;
+            AnswerOne.Enabled = false;
+            AnswerTwo.Enabled = false;
+            AnswerThree.Enabled = false;
+            AnswerFour.Enabled = false;
+        }
 
+        private void AnswerTwo_Click(object sender, EventArgs e)
+        {
+            if (AnswerTwo.isCorrect)
+            {
+                questionText.Text = "Congratulations!";
+                Globals.points += (500 - subtractedpoints);
+            }
+            else
+            {
+                questionText.Text = "Sorry.";
+            }
+            PointsLabel.Text = Globals.points.ToString();
+            NextButton.Visible = true;
+            AnswerOne.Enabled = false;
+            AnswerTwo.Enabled = false;
+            AnswerThree.Enabled = false;
+            AnswerFour.Enabled = false;
+        }
+
+        private void AnswerThree_Click(object sender, EventArgs e)
+        {
+            if (AnswerThree.isCorrect)
+            {
+                questionText.Text = "Congratulations!";
+                Globals.points += (500 - subtractedpoints);
+            }
+            else
+            {
+                questionText.Text = "Sorry.";
+            }
+            PointsLabel.Text = Globals.points.ToString();
+            NextButton.Visible = true;
+            AnswerOne.Enabled = false;
+            AnswerTwo.Enabled = false;
+            AnswerThree.Enabled = false;
+            AnswerFour.Enabled = false;
+        }
+
+        private void AnswerFour_Click(object sender, EventArgs e)
+        {
+            tm.Stop();
+            if (AnswerFour.isCorrect)
+            {
+                questionText.Text = "Congratulations!";
+                Globals.points += (500 - subtractedpoints);
+            }
+            else
+            {
+                questionText.Text = "Sorry.";
+            }
+            PointsLabel.Text = Globals.points.ToString();
+            NextButton.Visible = true;
+            AnswerOne.Enabled = false;
+            AnswerTwo.Enabled = false;
+            AnswerThree.Enabled = false;
+            AnswerFour.Enabled = false;
         }
 
 
-
-
-
-
-
-
-        private void loadQuestions()
+        private void nextButton_Click(object sender, EventArgs e)
         {
+            AnswerOne.Enabled = true;
+            AnswerTwo.Enabled = true;
+            AnswerThree.Enabled = true;
+            AnswerFour.Enabled = true;
+            nextQuestion();
+        }
+            
 
+        private void nextQuestion()
+        {
+            NextButton.Visible = false;
+            XDocument xm = XDocument.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
+            var questions = xm.Element("Questions").Elements();
+            Random rndm = new Random();
+            int rand = rndm.Next(0, questions.Count());
+            var currentQuestion = questions.ElementAt(rand);
+            questionText.Text = currentQuestion.Element("Title").Value;
+            var answers = currentQuestion.Element("Answers").Elements();
 
+            foreach (var answer in answers)
+            {
+                string text = answer.Element("Text").Value;
+                bool isCorrect = Boolean.Parse(answer.Element("isCorrect").Value.ToString());
+                if (answer == answers.First())
+                {
+                    AnswerOne.Text = answer.Element("Text").Value;
+                    AnswerOne.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                }
+                else if (answer == answers.ElementAt(1))
+                {
+                    AnswerTwo.Text = answer.Element("Text").Value;
+                    AnswerTwo.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                }
+                else if (answer == answers.ElementAt(2))
+                {
+                    AnswerThree.Text = answer.Element("Text").Value;
+                    AnswerThree.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                }
+                else if (answer == answers.ElementAt(3))
+                {
+                    AnswerFour.Text = answer.Element("Text").Value;
+                    AnswerFour.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                }
+            }
+            currentQuestion.Remove();
+            tm.Start();
         }
 
 
@@ -222,4 +308,17 @@ public class Question
 {
     public string QuestionText { get; set; }
     public IList<Answer> Answers { get; set; }
+}
+
+public class CButton : Button
+{
+    private bool Correct;
+
+    public bool isCorrect { get { return Correct; } set { Correct = value; } }
+}
+
+public static class Globals
+{
+    public static String username = "null";
+    public static int points = 0;
 }

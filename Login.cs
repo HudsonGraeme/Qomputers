@@ -106,6 +106,7 @@ namespace ICS3U1_Culminating
                     });
                     var result = await client.PostAsync("/addUser", null);
                 }*/
+                Globals.username = UsernameEntry.Text;
                 GameView GameView = new GameView();
                 GameView.Show();
                 this.Hide();

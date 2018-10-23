@@ -33,10 +33,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.questionText = new System.Windows.Forms.Label();
             this.MainLabel = new System.Windows.Forms.Label();
-            this.AnswerOne = new System.Windows.Forms.Button();
-            this.AnswerTwo = new System.Windows.Forms.Button();
-            this.AnswerThree = new System.Windows.Forms.Button();
-            this.AnswerFour = new System.Windows.Forms.Button();
+            this.AnswerOne = new CButton();
+            this.AnswerTwo = new CButton();
+            this.AnswerThree = new CButton();
+            this.AnswerFour = new CButton();
+            this.PointsLabel = new System.Windows.Forms.Label();
+            this.NextButton = new CButton();
             this.SuspendLayout();
             // 
             // button2
@@ -118,12 +120,14 @@
             this.AnswerOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnswerOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerOne.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AnswerOne.isCorrect = false;
             this.AnswerOne.Location = new System.Drawing.Point(150, 215);
             this.AnswerOne.Name = "AnswerOne";
             this.AnswerOne.Size = new System.Drawing.Size(500, 35);
             this.AnswerOne.TabIndex = 8;
             this.AnswerOne.Text = "AnswerOne";
             this.AnswerOne.UseVisualStyleBackColor = true;
+            this.AnswerOne.Click += new System.EventHandler(this.AnswerOne_Click);
             // 
             // AnswerTwo
             // 
@@ -133,12 +137,14 @@
             this.AnswerTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnswerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerTwo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AnswerTwo.isCorrect = false;
             this.AnswerTwo.Location = new System.Drawing.Point(150, 256);
             this.AnswerTwo.Name = "AnswerTwo";
             this.AnswerTwo.Size = new System.Drawing.Size(500, 35);
             this.AnswerTwo.TabIndex = 9;
             this.AnswerTwo.Text = "AnswerTwo";
             this.AnswerTwo.UseVisualStyleBackColor = true;
+            this.AnswerTwo.Click += new System.EventHandler(this.AnswerTwo_Click);
             // 
             // AnswerThree
             // 
@@ -148,12 +154,14 @@
             this.AnswerThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnswerThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerThree.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AnswerThree.isCorrect = false;
             this.AnswerThree.Location = new System.Drawing.Point(150, 297);
             this.AnswerThree.Name = "AnswerThree";
             this.AnswerThree.Size = new System.Drawing.Size(500, 35);
             this.AnswerThree.TabIndex = 10;
             this.AnswerThree.Text = "AnswerThree";
             this.AnswerThree.UseVisualStyleBackColor = true;
+            this.AnswerThree.Click += new System.EventHandler(this.AnswerThree_Click);
             // 
             // AnswerFour
             // 
@@ -163,12 +171,44 @@
             this.AnswerFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnswerFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnswerFour.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AnswerFour.isCorrect = false;
             this.AnswerFour.Location = new System.Drawing.Point(150, 338);
             this.AnswerFour.Name = "AnswerFour";
             this.AnswerFour.Size = new System.Drawing.Size(500, 35);
             this.AnswerFour.TabIndex = 11;
             this.AnswerFour.Text = "AnswerFour";
             this.AnswerFour.UseVisualStyleBackColor = true;
+            this.AnswerFour.Click += new System.EventHandler(this.AnswerFour_Click);
+            // 
+            // PointsLabel
+            // 
+            this.PointsLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PointsLabel.ForeColor = System.Drawing.Color.Goldenrod;
+            this.PointsLabel.Location = new System.Drawing.Point(12, 12);
+            this.PointsLabel.Name = "PointsLabel";
+            this.PointsLabel.Size = new System.Drawing.Size(218, 48);
+            this.PointsLabel.TabIndex = 12;
+            this.PointsLabel.Text = "Points";
+            this.PointsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NextButton
+            // 
+            this.NextButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.NextButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.NextButton.FlatAppearance.BorderSize = 2;
+            this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.isCorrect = false;
+            this.NextButton.Location = new System.Drawing.Point(150, 403);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(500, 35);
+            this.NextButton.TabIndex = 13;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Visible = false;
+            this.NextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // GameView
             // 
@@ -176,6 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.PointsLabel);
             this.Controls.Add(this.AnswerFour);
             this.Controls.Add(this.AnswerThree);
             this.Controls.Add(this.AnswerTwo);
@@ -200,9 +242,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label questionText;
         private System.Windows.Forms.Label MainLabel;
-        private System.Windows.Forms.Button AnswerOne;
-        private System.Windows.Forms.Button AnswerTwo;
-        private System.Windows.Forms.Button AnswerThree;
-        private System.Windows.Forms.Button AnswerFour;
+        private CButton AnswerOne;
+        private CButton AnswerTwo;
+        private CButton AnswerThree;
+        private CButton AnswerFour;
+        private System.Windows.Forms.Label PointsLabel;
+        private CButton NextButton;
     }
 }
