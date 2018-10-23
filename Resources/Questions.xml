@@ -3,7 +3,7 @@
 <Questions>
   
   <Question>
-    
+    <Title>Some</Title>
     <Answers>
       
       <Answer>
@@ -27,15 +27,11 @@
       </Answer>
       
     </Answers>
-
-
-    
-    <Title>Some</Title>
     
   </Question>
 
   <Question>
-
+    <Title>What is parallel processing?</Title>
     <Answers>
       <Answer>
         <Text>
@@ -46,9 +42,6 @@
         </isCorrect>
       </Answer>
     </Answers>
-    <Title>
-      Questwo
-    </Title>
 
   </Question>
   
