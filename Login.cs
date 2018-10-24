@@ -75,7 +75,7 @@ namespace ICS3U1_Culminating
             hind.AddFontFile(Application.StartupPath + "\\resources\\" + "Hind-Light.ttf");
             UsernameEntry.Font = new Font(hind.Families[0], 12);
             UsernameEntry.Visible = false;
-            UsernameEntry.Location = new Point(ActiveForm.Size.Width / 2 - (UsernameEntry.Width + 200), (this.ClientSize.Height / 2) + UsernameEntry.Height / 2);
+            UsernameEntry.Location = new Point(this.Size.Width / 2 - (UsernameEntry.Width + 200), (this.ClientSize.Height / 2) + UsernameEntry.Height / 2);
             UsernameEntry.BackColor = this.BackColor;
             UsernameEntry.ForeColor = Color.White;
             UsernameEntry.TextAlign = HorizontalAlignment.Center;
@@ -262,7 +262,7 @@ namespace ICS3U1_Culminating
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void Login_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

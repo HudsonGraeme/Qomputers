@@ -4,51 +4,282 @@
   
   <Question>
     
+    <Title>What is the purpose of parallel processing?</Title>
+    
     <Answers>
       
       <Answer>
-        <Text>FirstAnswer</Text>
-        <isCorrect>false</isCorrect>
+        <Text>To make cpu usage as efficient as possible</Text>
+        <isCorrect>true</isCorrect>
       </Answer>
       
       <Answer>
-        <Text>SecondAnswer</Text>
+        <Text>To increase task power</Text>
         <isCorrect>false</isCorrect>
       </Answer>
 
       <Answer>
-        <Text>thirdAnswer</Text>
+        <Text>To stop a large amount of programs faster</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>To autonomously drive vehicles</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+      
+    </Answers>
+    
+  </Question>
+
+  <Question>
+    
+    <Title>What is parallel processing?</Title>
+    
+    <Answers>
+      
+      <Answer>
+        <Text>When a machine mimics cognitive functions</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Simultaneous computing</Text>
         <isCorrect>true</isCorrect>
       </Answer>
 
       <Answer>
-        <Text>FourthAnswer</Text>
+        <Text>Processing which uses multithreading</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>CPU expressions which exceed the nominal workload</Text>
         <isCorrect>false</isCorrect>
       </Answer>
       
     </Answers>
 
+  </Question>
 
+  <Question>
+    <Title>Examples of artificial intelligence include:</Title>
+    <Answers>
+      
+      <Answer>
+        <Text>Autonomous chess players</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Self driving vehicles</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Smart Assistants</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>All of the above</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+      
+    </Answers>
+  </Question>
+
+
+  <Question>
+
+    <Title>Data mining is _____</Title>
+
+    <Answers>
+
+
+      <Answer>
+        <Text>The process of discorvering patterns in large data amounts</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Process of mining for extra computer storage</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Cryptocurrency mining</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>The process of viewing data in asymmetrical format</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+      
+      
+      
+    </Answers>
     
-    <Title>Some</Title>
     
   </Question>
 
   <Question>
 
+    <Title>Forms of data analysis include:</Title>
+
     <Answers>
+
       <Answer>
-        <Text>
-          AnsOne
-        </Text>
-        <isCorrect>
-          false
-        </isCorrect>
+        <Text>classification analysis, anomaly or outlier detection and error detection</Text>
+        <isCorrect>false</isCorrect>
       </Answer>
+
+      <Answer>
+        <Text>classification analysis, error trapping</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+      
+      <Answer>
+        <Text>classification analysis, association rules, anomaly or outlier detection, regression analysis</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>error trapping, error identification, regression analysis</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+
+
     </Answers>
-    <Title>
-      Questwo
-    </Title>
+
+
+  </Question>
+
+  <Question>
+
+    <Title>What is image processing?</Title>
+
+    <Answers>
+
+      <Answer>
+        <Text>Optimizing the appearance of an image on multiple different devices</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>The use of computer algorithms to process a digital image</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>When a lens is attached to a camera body</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>A technique used to reproduce a greater dynamic range of luminosity</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+
+
+    </Answers>
+
+
+  </Question>
+
+  <Question>
+
+    <Title>What is cryptography?</Title>
+
+    <Answers>
+
+      <Answer>
+        <Text>The art of securing large payloads to large vehicles</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>The use of computer algorithms to process a large file</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>The practise and study of techniques for data transfer and transfer protocols</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>The practise and study of techniques for secure communication</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+
+    </Answers>
+
+
+  </Question>
+
+  <Question>
+
+    <Title>Modern encryption process includes...</Title>
+
+    <Answers>
+
+      <Answer>
+        <Text>Plaintext -> Encryption -> Ciphertext</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Private key -> Encryption -> Large int64 -> Ciphertext</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Ciphertext -> Decryption -> Plaintext</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Ciphertext -> Modulation -> Output (CipherInteger)</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+    </Answers>
+
+
+  </Question>
+
+  <Question>
+
+    <Title>Geographic Information Systems (GISs) can _____ geographic data</Title>
+
+    <Answers>
+
+      <Answer>
+        <Text>Convert latitude and longitude into</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Create an augmented reality version of </Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Store, Create, Manage, Augment</Text>
+        <isCorrect>false</isCorrect>
+      </Answer>
+
+      <Answer>
+        <Text>Capture, Store, Manipulate, Analyze, Represent and Manage</Text>
+        <isCorrect>true</isCorrect>
+      </Answer>
+      
+    </Answers>
+
 
   </Question>
   

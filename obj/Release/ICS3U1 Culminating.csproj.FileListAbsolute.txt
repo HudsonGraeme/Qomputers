@@ -1,0 +1,22 @@
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\Resources\Hind-Light.ttf
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\Resources\Questions.xml
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\ICS3U1 Culminating.exe.config
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\ICS3U1 Culminating.exe
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\ICS3U1 Culminating.pdb
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\Newtonsoft.Json.dll
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\System.Net.Http.Extensions.dll
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\System.Net.Http.Primitives.dll
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\Newtonsoft.Json.xml
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\System.Net.Http.Extensions.xml
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\bin\Release\System.Net.Http.Primitives.xml
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1_Culminating.Landing.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1_Culminating.LeaderBoard.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1_Culminating.InitialView.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1_Culminating.GameView.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1_Culminating.Properties.Resources.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.csproj.GenerateResource.cache
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.csproj.CoreCompileInputs.cache
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.csproj.CopyComplete
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.exe
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.pdb
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Release\ICS3U1 Culminating.csprojAssemblyReference.cache

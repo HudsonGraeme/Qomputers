@@ -37,9 +37,9 @@ namespace ICS3U1_Culminating
             {
                 subtractedpoints += 10;
             }
-               
+
         }
-        private void AnswerOne_Click(object sender, EventArgs e) 
+        private void AnswerOne_Click(object sender, EventArgs e)
         {
             if (AnswerOne.isCorrect)
             {
@@ -125,46 +125,67 @@ namespace ICS3U1_Culminating
             AnswerFour.Enabled = true;
             nextQuestion();
         }
-            
 
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+            Landing landing = new Landing();
+            landing.Show();
+            this.Hide();
+        }
         private void nextQuestion()
         {
             NextButton.Visible = false;
-            XDocument xm = XDocument.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
-            var questions = xm.Element("Questions").Elements();
-            Random rndm = new Random();
-            int rand = rndm.Next(0, questions.Count());
-            var currentQuestion = questions.ElementAt(rand);
-            questionText.Text = currentQuestion.Element("Title").Value;
-            var answers = currentQuestion.Element("Answers").Elements();
-
-            foreach (var answer in answers)
+            var xm = Globals.xm;
+            var questions = Globals.questions;
+            if (questions.Count() < 1)
             {
-                string text = answer.Element("Text").Value;
-                bool isCorrect = Boolean.Parse(answer.Element("isCorrect").Value.ToString());
-                if (answer == answers.First())
-                {
-                    AnswerOne.Text = answer.Element("Text").Value;
-                    AnswerOne.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
-                }
-                else if (answer == answers.ElementAt(1))
-                {
-                    AnswerTwo.Text = answer.Element("Text").Value;
-                    AnswerTwo.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
-                }
-                else if (answer == answers.ElementAt(2))
-                {
-                    AnswerThree.Text = answer.Element("Text").Value;
-                    AnswerThree.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
-                }
-                else if (answer == answers.ElementAt(3))
-                {
-                    AnswerFour.Text = answer.Element("Text").Value;
-                    AnswerFour.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
-                }
+                AnswerOne.Enabled = false;
+                AnswerTwo.Enabled = false;
+                AnswerThree.Enabled = false;
+                AnswerFour.Enabled = false;
+                Button Finish = new Button();
+                Finish = NextButton;
+                Finish.Text = "Finish";
+                Finish.Enabled = true;
+                Finish.Visible = true;
+                Finish.Click += new EventHandler(finishButton_Click);
+                this.Controls.Add(Finish);
             }
-            currentQuestion.Remove();
-            tm.Start();
+            else {
+                Random rndm = new Random();
+                int rand = rndm.Next(0, questions.Count());
+                var currentQuestion = questions.ElementAt(rand);
+                questionText.Text = currentQuestion.Element("Title").Value;
+                var answers = currentQuestion.Element("Answers").Elements();
+
+                foreach (var answer in answers)
+                {
+                    string text = answer.Element("Text").Value;
+                    bool isCorrect = Boolean.Parse(answer.Element("isCorrect").Value.ToString());
+                    if (answer == answers.First())
+                    {
+                        AnswerOne.Text = answer.Element("Text").Value;
+                        AnswerOne.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                    }
+                    else if (answer == answers.ElementAt(1))
+                    {
+                        AnswerTwo.Text = answer.Element("Text").Value;
+                        AnswerTwo.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                    }
+                    else if (answer == answers.ElementAt(2))
+                    {
+                        AnswerThree.Text = answer.Element("Text").Value;
+                        AnswerThree.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                    }
+                    else if (answer == answers.ElementAt(3))
+                    {
+                        AnswerFour.Text = answer.Element("Text").Value;
+                        AnswerFour.isCorrect = Boolean.Parse(answer.Element("isCorrect").Value);
+                    }
+                }
+                xm.Element("Questions").Elements().ElementAt(rand).Remove();
+                tm.Start();
+            }
         }
 
 
@@ -274,7 +295,7 @@ namespace ICS3U1_Culminating
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void GameView_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -321,4 +342,6 @@ public static class Globals
 {
     public static String username = "null";
     public static int points = 0;
+    public static XDocument xm = XDocument.Load(Application.StartupPath + "\\resources\\" + "Questions.xml");
+    public static IEnumerable<XElement> questions = xm.Element("Questions").Elements();
 }

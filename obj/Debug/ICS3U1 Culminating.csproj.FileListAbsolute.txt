@@ -53,3 +53,5 @@ H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1_Culminating.Prop
 H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.csproj.GenerateResource.Cache
 H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.exe
 H:\Downloads\Qomputers-master\Qomputers-master\obj\Debug\ICS3U1 Culminating.pdb
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Debug\ICS3U1_Culminating.Landing.resources
+C:\Users\GG\Downloads\Qomputers-master (2)\Qomputers-master\obj\Debug\ICS3U1_Culminating.LeaderBoard.resources
